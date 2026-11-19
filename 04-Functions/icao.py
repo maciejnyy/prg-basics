@@ -2,7 +2,7 @@
 # Converts letter to corresponding ICAO word
 #
 def icao(letter):
-    letter = letter.capitalize()
+    letter = str(letter).capitalize()
     if letter == 'A':
         icao_name = 'Alfa'
     elif letter == 'B':
@@ -60,10 +60,13 @@ def icao(letter):
 
     return icao_name
 
-# Function usage
-name = input('Enter your name: ')
-print('ICAO words for spelling out your name:')
+if __name__ == "__main__":
+    # Function usage
+    name = input('Enter your name: ')
+    print('ICAO words for spelling out your name:')
 
-for char in ...:
-    word = icao...
-    print(..., end=" ") 
+    for char in name:
+        if char.isalpha():
+            word = icao(char)
+            print(word, end=" ")
+    print()
