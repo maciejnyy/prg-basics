@@ -1,17 +1,12 @@
-def identity_matrix(n):
-    return [[1 if i == j else 0 for j in range(n)] for i in range(n)]
-
-def print_matrix(matrix):
-    for row in matrix:
-        for item in row:
-            print(item, end=" ")
-        print()
-    print()
+def flatten_matrix(m):
+    return [item for row in m for item in row]
 
 if __name__ == "__main__":
-    print("Matrix 3x3:")
-    print_matrix(identity_matrix(3))
-    print("Matrix 5x5:")
-    print_matrix(identity_matrix(5))
-    print("Matrix 8x8:")
-    print_matrix(identity_matrix(8))
+    matrices = [
+        [[2, 3], [1, 5]],
+        [[5, 0, 3, 7, 5], [9, 0, 9, 1, 2]],
+        [[2, 1], [3, 5], [7, 4], [2, 6]]
+    ]
+    
+    for m in matrices:
+        print(f"2D Array: {m}\n1D Array: {flatten_matrix(m)}\n")

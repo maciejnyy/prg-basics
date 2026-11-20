@@ -1,16 +1,17 @@
-arr = [
-    [1, 2, 3, 4, 5],
-    [6, 7, 8, 9, 10],
-    [11, 12, 13, 14, 15]
-]
+def identity_matrix(n):
+    return [[1 if i == j else 0 for j in range(n)] for i in range(n)]
 
-print("Before:")
-for row in arr:
-    print(row)
+def print_matrix(matrix):
+    for row in matrix:
+        for item in row:
+            print(item, end=" ")
+        print()
+    print()
 
-# Swap first and last row
-arr[0], arr[-1] = arr[-1], arr[0]
-
-print("\nAfter:")
-for row in arr:
-    print(row)
+if __name__ == "__main__":
+    print("Matrix 3x3:")
+    print_matrix(identity_matrix(3))
+    print("Matrix 5x5:")
+    print_matrix(identity_matrix(5))
+    print("Matrix 8x8:")
+    print_matrix(identity_matrix(8))

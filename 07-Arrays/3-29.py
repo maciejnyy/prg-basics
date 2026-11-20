@@ -1,9 +1,6 @@
-arr = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8]
-]
+def create_2d_arr(x, y):
+    return [[0 for _ in range(y)] for _ in range(x)]
 
+arr = create_2d_arr(3, 5)
 for row in arr:
-    for item in row:
-        print(item, end=" ")
-    print()
+    print(row)

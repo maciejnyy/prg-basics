@@ -1,6 +1,12 @@
 import matplotlib.pyplot as plt
+import math
 
-xpoints = [1, 8]
-ypoints = [3, 10]
-plt.plot(xpoints, ypoints)
+x = []
+y = []
+
+for n in range(0, 361):
+    x.append(n)
+    y.append(math.sin(math.radians(n)))
+
+plt.plot(x, y)
 plt.show()

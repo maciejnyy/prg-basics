@@ -1,17 +1,22 @@
-arr = [
-    [1, 2, 3, 4, 5],
-    [6, 7, 8, 9, 10],
-    [11, 12, 13, 14, 15]
-]
+def transpose_matrix(m):
+    return [[m[j][i] for j in range(len(m))] for i in range(len(m[0]))]
 
-print("Before:")
-for row in arr:
-    print(row)
+def print_matrix(matrix):
+    for row in matrix:
+        for item in row:
+            print(item, end=" ")
+        print()
 
-# Swap first and last column
-for i in range(len(arr)):
-    arr[i][0], arr[i][-1] = arr[i][-1], arr[i][0]
-
-print("\nAfter:")
-for row in arr:
-    print(row)
+if __name__ == "__main__":
+    matrices = [
+        [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
+        [[1, 2, 3, 4, 5], [6, 7, 8, 9, 0]],
+        [[5, 6, 7, 8]]
+    ]
+    
+    for m in matrices:
+        print("Original:")
+        print_matrix(m)
+        print("Transposed:")
+        print_matrix(transpose_matrix(m))
+        print("-" * 15)

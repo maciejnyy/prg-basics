@@ -1,9 +1,10 @@
-array = [15,8,31,47,2,19]
-i = -1
-reverse_array = []
-for j in range(len(array)):
-    j = array[i]
-    reverse_array.append(j)
-    i -= 1
-print(reverse_array)
+import random
 
+def rand_elem(array):
+    return random.choice(array)
+
+if __name__ == "__main__":
+    arr = [10, 20, 30, 40, 50, 60]
+    print("Random elements:")
+    for _ in range(3):
+        print(rand_elem(arr))

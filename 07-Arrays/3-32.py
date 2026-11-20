@@ -1,10 +1,16 @@
-arr = [[0 for _ in range(5)] for _ in range(5)]
+arr = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15]
+]
 
-for i in range(5):
-    for j in range(5):
-        arr[i][j] = (i + 1) * (j + 1)
-
+print("Before:")
 for row in arr:
-    for item in row:
-        print(f"{item:2d}", end=" ")
-    print()
+    print(row)
+
+# Swap first and last row
+arr[0], arr[-1] = arr[-1], arr[0]
+
+print("\nAfter:")
+for row in arr:
+    print(row)

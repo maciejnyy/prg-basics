@@ -1,16 +1,9 @@
-import matplotlib.pyplot as plt
+arr = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8]
+]
 
-x = []
-y = []
-
-# create x values
-for n in range(-100, 101):
-    x = x + [n]
-
-# create y values
-for n in x:
-    y.append(n**2 - 3)
-
-# print chart
-plt.plot(x, y)
-plt.show()
+for row in arr:
+    for item in row:
+        print(item, end=" ")
+    print()
