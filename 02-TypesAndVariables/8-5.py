@@ -1,12 +1,8 @@
 ###
-# The program calculates the cost of transporting goods
-# based on the given distance in km, fuel price per 1 liter,
-# and fuel consumption in liters per 100 km.
+# A program that reads a SWIFT code from the keyboard
+# and prints the bank code and country code.
+# Test: BPKOPLPW, CHASUS33, DEUTDEFF
 #
-distance = int(input('Enter distance in km: '))
-fuel_price = float(input('Enter fuel price per liter: '))
-fuel_consumption = float(input('Enter fuel consumption per 100 km: '))
-total_fuel_consumption = distance * fuel_consumption / 100
-total_cost = total_fuel_consumption * fuel_price
-print(f'Total fuel consumption: {total_fuel_consumption:.2f} liters')
-print(f'Total transport cost: {total_cost:.2f}')
+swift = input('Enter SWIFT code: ')
+print(f'Bank Code: {swift[0:4]}')
+print(f'Country Code: {swift[4:6]}')

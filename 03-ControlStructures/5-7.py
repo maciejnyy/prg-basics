@@ -1,12 +1,22 @@
 import time
-t = int(input('Enter time in seconds: '))
-while t > 0:
-    if t == 5: print('five')
-    elif t == 4: print('four')
-    elif t == 3: print('three')
-    elif t == 2: print('two')
-    elif t == 1: print('one')
-    else: print(t)
+
+countdown = int(input("Enter the number of seconds to count down: "))
+
+while countdown > 0:
+    if countdown > 5:
+        print(countdown)
+    elif countdown == 5:
+        print("five")
+    elif countdown == 4:
+        print("four")
+    elif countdown == 3:
+        print("three")
+    elif countdown == 2:
+        print("two")
+    elif countdown == 1:
+        print("one")
+    
+    countdown -= 1
     time.sleep(1)
-    t -= 1
-print('zero')
+
+print("Time's up!")

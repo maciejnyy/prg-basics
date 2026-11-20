@@ -1,12 +1,14 @@
 ###
-# A program that prints your height both in cm and in feet and inches.
+# A program that reads temperature in degrees Celsius from the keyboard.
+# Use comments to briefly describe the program's algorithm.
 #
-cm = 170
-# convert to total inches (1 inch = 2.54 cm)
-total_inches = round(cm / 2.54)
-# calculate the number of feet (1 foot = 12 inches)
-feet = total_inches // 12
-# calculate the remaining inches
-inches = total_inches % 12
 
-print(f'I am {cm}cm tall, i.e. {feet} feet and {inches} inches')
+# read the temperature in Celsius from the keyboard
+celsius = float(input('Enter temperature in Celsius: '))
+# calculate Kelvin: K = C + 273.15
+kelvin = celsius + 273.15
+# calculate Fahrenheit: F = C * 9/5 + 32
+fahrenheit = celsius * 9 / 5 + 32
+# print results
+print(f'Temperature in Kelvin: {kelvin:.2f}')
+print(f'Temperature in Fahrenheit: {fahrenheit:.2f}')
